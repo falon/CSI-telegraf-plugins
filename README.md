@@ -5,7 +5,7 @@ This is a collection of Telegraf plugins.
 These plugins are now ready_:
 
 - [ds389](plugins/inputs/ds389/README.md): a 389ds metrics collection from cn=monitor.
-- [ldap__org](plugins/inputs/ldap_org/README.md): monitor number of entries inside LDAP trees.
+- [ldap_org](plugins/inputs/ldap_org/README.md): monitor number of entries inside LDAP trees.
 
 ## Install Instructions
 
