@@ -1,6 +1,6 @@
 Name:		CSI-telegraf-plugins
 Version:	0.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	external agents for collecting, processing, aggregating, and writing metrics for Telegraf.
 
 Group:		Development/Tools

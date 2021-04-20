@@ -44,8 +44,8 @@ const sampleConfig string = `
   insecure_skip_verify = false
 
   # dn/password to bind with. If bind_dn is empty, an anonymous bind is performed.
-  bind_dn = ""
-  bind_password = ""
+  bindDn = ""
+  bindPassword = ""
 
   ## Gather dbname to monitor
   # Comma separated list of db filename

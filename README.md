@@ -45,15 +45,13 @@ Configuration files are under
 
 	/etc/CSI-telegraf-plugins/
 
-path and are ready to work.
-
 The path to command is */usr/bin*.
 
 For instance, if you want add `ldap_org` to Telegraf add to Telegraf config file the following:
 
 ```
 [[inputs.execd]]
-   command = ["/path/to/telegraf-ldap_org", "-config", "/etc/CSI-telegraf-plugins/ldap_org.conf", "-poll_interval", "24h"]
+   command = ["/usr/bin/telegraf-ldap_org", "-config", "/etc/CSI-telegraf-plugins/ldap_org.conf", "-poll_interval", "24h"]
 ```
 
 <!-- To allow Telegraf to control the interval, set `-poll_interval_disabled` on the *command* and the appropriate `interval` in */etc/CSI-telegraf-plugins/ldap_org.conf*. -->
