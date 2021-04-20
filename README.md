@@ -21,9 +21,39 @@ You should then be able to call this from telegraf now using:
 
 ```
 [[inputs.execd]]
-   command = ["/path/to/telegraf-<plugin_name>", "-config", "/etc/telegraf-external/<plugin_name>.conf"
+   command = ["/path/to/telegraf-<plugin_name>", "-config", "/etc/telegraf-external/<plugin_name>.conf"]
 ```
 
 ### By RPM
 
-As soon as possible
+You can install using RPM in Centos/EL8 systems following these instructions.
+
+In the host where you installed Telegraf:
+
+```
+curl -1sLf \
+  'https://dl.cloudsmith.io/public/csi/shared/setup.rpm.sh' \
+  | sudo -E bash
+```
+
+This installs the repository. Now you can install the package:
+
+`dnf install CSI-telegraf-plugins`
+
+This install all our Telegraf _external plugins_.
+Configuration files are under
+
+	/etc/CSI-telegraf-plugins/
+
+path and are ready to work.
+
+The path to command is */usr/bin*.
+
+For instance, if you want add `ldap_org` to Telegraf add to Telegraf config file the following:
+
+```
+[[inputs.execd]]
+   command = ["/path/to/telegraf-ldap_org", "-config", "/etc/CSI-telegraf-plugins/ldap_org.conf", "-poll_interval", "24h"]
+```
+
+<!-- To allow Telegraf to control the interval, set `-poll_interval_disabled` on the *command* and the appropriate `interval` in */etc/CSI-telegraf-plugins/ldap_org.conf*. -->
