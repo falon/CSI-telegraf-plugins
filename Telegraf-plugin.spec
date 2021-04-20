@@ -26,7 +26,7 @@ These input plugins are currently included:
 
 
 %prep
-spectool -R -f -g %{_topdir}/SPECS/telegraf-plugin.spec
+spectool -R -f -g %{_topdir}/SPECS/Telegraf-plugin.spec
 %autosetup -n %{name}-master
 
 
