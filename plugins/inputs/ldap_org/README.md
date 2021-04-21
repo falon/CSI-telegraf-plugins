@@ -26,9 +26,6 @@ You could need to count all entries `(objectClass=*)` or only ones returned by a
 ```
 # LDAP Count by Org plugin
 [[inputs.ldap_org]]
-  # This is an high load plugin. Tipically once a day run is sufficient.
-  interval = "24h"
-
   # LDAP Host and post to query
   host = "localhost"
   port = 389
@@ -66,7 +63,7 @@ You probably must define a bind with appropriate ACI.
 ### Example Output:
 
 ```
-$ telegraf -config etc/telegraf.conf --config-directory etc/ -input-filter ldap_org -test -debug
+$ telegraf-ldap_org -config ldap_org.conf -pollInterval 24h
 2019-07-08T12:03:41Z I! Starting Telegraf 1.11.1
 > ldap_org,base=o\=myorg\,c\=en,host=telegraf.example.com,port=389,server=ldap.example.com myfirstdomain=2i,myseconddomain=1i 1562587461000000000
 ```

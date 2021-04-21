@@ -53,5 +53,3 @@ For instance, if you want add `ldap_org` to Telegraf add to Telegraf config file
 [[inputs.execd]]
    command = ["/usr/bin/telegraf-ldap_org", "-config", "/etc/CSI-telegraf-plugins/ldap_org.conf", "-poll_interval", "24h"]
 ```
-
-<!-- To allow Telegraf to control the interval, set `-poll_interval_disabled` on the *command* and the appropriate `interval` in */etc/CSI-telegraf-plugins/ldap_org.conf*. -->

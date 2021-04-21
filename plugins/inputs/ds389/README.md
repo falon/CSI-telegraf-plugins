@@ -122,6 +122,6 @@ Format:
 ### Example Output:
 
 ```
-$ telegraf-ds389 -config ds389.conf
+$ telegraf-ds389 -config ds389.conf -pollInterval 10s
 > ds389,host=dod-X750JB,port=389,server=ldap01,version=389-Directory/1.3.8.4\ B2019.037.1535 addentryops=0i,anonymousbinds=0i,bindsecurityerrors=3i,bytesrecv=0i,bytessent=190256225i,cacheentries=0i,cachehits=0i,chainings=0i,compareops=0i,conn.64.binddn="NULLDN",conn.64.ip="10.10.15.17",conn.64.opentime="20190704223412Z",conn.64.opscompleted=1i,conn.64.opsinitiated=1i,conn.64.rw="-",conn.65.binddn="NULLDN",conn.65.ip="10.10.15.17",conn.65.opentime="20190704223412Z",conn.65.opscompleted=1i,conn.65.opsinitiated=1i,conn.65.rw="-",connections=6i,connectionseq=86840i,connectionsinmaxthreads=0i,connectionsmaxthreadscount=0i,copyentries=0i,currentconnections=6i,currentconnectionsatmaxthreads=0i,dtablesize=1024i,entriesreturned=259120i,entriessent=259120i,errors=255i,inops=306715i,listops=0i,masterentries=0i,maxthreadsperconnhits=0i,modifyentryops=11i,modifyrdnops=0i,onelevelsearchops=118i,opscompleted=306714i,opsinitiated=306715i,readops=0i,readwaiters=0i,referrals=0i,referralsreturned=0i,removeentryops=0i,searchops=117848i,securityerrors=0i,simpleauthbinds=86815i,slavehits=0i,strongauthbinds=0i,totalconnections=86840i,unauthbinds=3i,wholesubtreesearchops=113152i 1554566915000000000
 ```
