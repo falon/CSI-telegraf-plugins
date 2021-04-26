@@ -1,6 +1,6 @@
 Name:		CSI-telegraf-plugins
 Version:	0.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	external agents for collecting, processing, aggregating, and writing metrics for Telegraf.
 
 Group:		Development/Tools
@@ -35,21 +35,23 @@ go build -ldflags="-linkmode=external -compressdwarf=false" -o telegraf-ds389 cm
 go build -ldflags="-linkmode=external -compressdwarf=false" -o telegraf-ldap_org cmd/main-ldap_org.go
 
 %install
-install -D -m 0750 -t %{buildroot}%{_bindir} -g telegraf telegraf-*
-install -D -m 0644 -t %{buildroot}%{_sysconfdir}/%name -g telegraf *.conf
+install -D -m 0750 -t %{buildroot}%{_bindir} telegraf-*
+install -D -m 0644 -t %{buildroot}%{_sysconfdir}/%name *.conf
 install -D -m 0644 plugins/inputs/ds389/README.md README-ds389.md
 install -D -m 0644 plugins/inputs/ldap_org/README.md README-ldap_org.md
 
 %files
 %doc README*.md 
-%_bindir/telegraf-ds389
-%config(noreplace) %_sysconfdir/%name/ds389.conf
-%_bindir/telegraf-ldap_org
-%config(noreplace) %_sysconfdir/%name/ldap_org.conf
+%attr(-, root, telegraf) %_bindir/telegraf-ds389
+%attr(-, root, telegraf) %config(noreplace) %_sysconfdir/%name/ds389.conf
+%attr(-, root, telegraf) %_bindir/telegraf-ldap_org
+%attr(-, root, telegraf) %config(noreplace) %_sysconfdir/%name/ldap_org.conf
 
 
 
 %changelog
-* Mon Apr 19 2021 Marco Favero <m.faverof@gmailcom> - 0.1-1
+* Mon Apr 26 2021 Marco Favero <m.faverof@gmail.com> - 0.1-3
+- Fixed ownership
+* Mon Apr 19 2021 Marco Favero <m.faverof@gmail.com> - 0.1-1
 - Initial Release
 
