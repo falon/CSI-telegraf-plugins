@@ -64,3 +64,14 @@ For instance, if you want add `ldap_org` to Telegraf add to Telegraf config file
 You can find a role [here](https://galaxy.ansible.com/falon/telegraf-extplugins).
 
 In your Ansible installation type: `ansible-galaxy install falon.telegraf_extplugins`.
+
+## Grafana dashboard
+
+For **ldap_org**:
+
+- https://grafana.com/grafana/dashboards/10591
+
+For **ds389**:
+
+- https://grafana.com/grafana/dashboards/10587
+- https://grafana.com/grafana/dashboards/10590
