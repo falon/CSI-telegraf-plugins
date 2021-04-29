@@ -22,7 +22,12 @@ You should then be able to call this from telegraf now using:
 ```
 [[inputs.execd]]
    command = ["/path/to/telegraf-<plugin_name>", "-config", "/etc/telegraf-external/<plugin_name>.conf"]
+   [inputs.execd.tags]
+      instance = "default"
 ```
+
+If you want any tags, just add them to execd plugin as above. __Tags in the external plugin configuration file doesn't work__.
+
 
 ### By RPM
 
@@ -53,3 +58,9 @@ For instance, if you want add `ldap_org` to Telegraf add to Telegraf config file
 [[inputs.execd]]
    command = ["/usr/bin/telegraf-ldap_org", "-config", "/etc/CSI-telegraf-plugins/ldap_org.conf", "-poll_interval", "24h"]
 ```
+
+#### Ansible role
+
+You can find a role [here](https://galaxy.ansible.com/falon/telegraf-extplugins).
+
+In your Ansible installation type: `ansible-galaxy install falon.telegraf_extplugins`.
