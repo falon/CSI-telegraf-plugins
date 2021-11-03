@@ -64,6 +64,7 @@ var searchFilter = "(objectClass=extensibleObject)"
 var searchAttrs = []string{
 	"currentconnections",
 	"totalconnections",
+	"threads",
 	"currentconnectionsatmaxthreads",
 	"maxthreadsperconnhits",
 	"dtablesize",
@@ -108,6 +109,9 @@ var searchAttrs = []string{
 	"backendmonitordn",
 	"connection",
 	"version",
+	"currenttime",
+	"starttime",
+	"nbackends",
 }
 
 var searchLdbmAttrs = []string{
@@ -298,6 +302,8 @@ func (o *ds389) Gather(acc telegraf.Accumulator) error {
 		"server":  o.Host,
 		"port":    strconv.Itoa(o.Port),
 		"version": sr.Entries[0].GetAttributeValue("version"),
+		"start": sr.Entries[0].GetAttributeValue("starttime"),
+		"current": sr.Entries[0].GetAttributeValue("currenttime"),
 	}
 	acc.AddFields("ds389", field, tags)
 	return nil

@@ -1,6 +1,6 @@
 Name:		CSI-telegraf-plugins
 Version:	0.1
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	external agents for collecting, processing, aggregating, and writing metrics for Telegraf.
 
 Group:		Development/Tools
@@ -12,7 +12,7 @@ BuildRequires:	go
 BuildRequires:  systemd-devel
 BuildRequires:  unzip
 Requires:       systemd
-Requires:	telegraf > 1.18.0
+Requires:	telegraf > 1.20.2
 
 Vendor:		Falon Entertainment
 Packager:	Marco Favero <marco.favero@csi.it>
@@ -50,6 +50,9 @@ install -D -m 0644 plugins/inputs/ldap_org/README.md README-ldap_org.md
 
 
 %changelog
+* Wed Nov 03 2021 Marco Favero <m.faverof@gmail.com> - 0.1-4
+- added threads and nbackends as metric.
+- added "starttime" and "currenttime" to tags.
 * Mon Apr 26 2021 Marco Favero <m.faverof@gmail.com> - 0.1-3
 - Fixed ownership
 * Mon Apr 19 2021 Marco Favero <m.faverof@gmail.com> - 0.1-1

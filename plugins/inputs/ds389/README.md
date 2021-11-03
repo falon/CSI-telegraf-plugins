@@ -52,10 +52,11 @@ An 389DS 1.3.x server will provide these metrics:
     - host
     - port
     - instancename
-    - version
 - fields:
+  - version
   - currentconnections
   - totalconnections
+  - threads
   - currentconnectionsatmaxthreads
   - maxthreadsperconnhits
   - dtablesize
@@ -97,6 +98,9 @@ An 389DS 1.3.x server will provide these metrics:
   - cacheentries
   - cachehits
   - slavehits
+  - currenttime
+  - starttime
+  - nbackends
 
 If you enable the Connection status (status = true) a full connection status detail will be added to the metrics.
 The idea is to monitor all metrics provided by the 389 Console.
