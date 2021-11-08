@@ -122,6 +122,16 @@ var searchLdbmAttrs = []string{
 	"dbcacheroevict",
 	"dbcacherwevict",
 	"dbcachetries",
+	"normalizeddncachetries",
+	"normalizeddncachehits",
+	"normalizeddncachemisses",
+	"normalizeddncachehitratio",
+	"normalizeddncacheevictions",
+	"currentnormalizeddncachesize",
+	"maxnormalizeddncachesize",
+	"normalizeddncachethreadsize",
+	"normalizeddncachethreadslots",
+	"currentnormalizeddncachecount",
 }
 
 var searchDbAttrs = []string{}
