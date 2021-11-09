@@ -132,6 +132,11 @@ var searchLdbmAttrs = []string{
 	"normalizeddncachethreadsize",
 	"normalizeddncachethreadslots",
 	"currentnormalizeddncachecount",
+	"nsslapd-db-abort-rate",
+	"nsslapd-db-active-txns",
+	"nsslapd-db-deadlock-rate",
+	"nsslapd-db-lock-conflicts",
+	"nsslapd-db-lock-request-rate",
 }
 
 var searchDbAttrs = []string{}

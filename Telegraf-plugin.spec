@@ -1,6 +1,6 @@
 Name:		CSI-telegraf-plugins
 Version:	0.1
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	external agents for collecting, processing, aggregating, and writing metrics for Telegraf.
 
 Group:		Development/Tools
@@ -50,6 +50,8 @@ install -D -m 0644 plugins/inputs/ldap_org/README.md README-ldap_org.md
 
 
 %changelog
+* Tue Nov 09 2021 Marco Favero <m.faverof@gmail.com> - 0.1.6
+- added some metrics about DB transactions.
 * Mon Nov 08 2021 Marco Favero <m.faverof@gmail.com> - 0.1-5
 - added normalized dn cache metrics.
 * Wed Nov 03 2021 Marco Favero <m.faverof@gmail.com> - 0.1-4
