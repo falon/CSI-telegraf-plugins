@@ -141,7 +141,23 @@ var searchLdbmAttrs = []string{
 	"nsslapd-db-max-locks",
 }
 
-var searchDbAttrs = []string{}
+var searchDbAttrs = []string{
+	"readonly",
+	"entrycachehits",
+	"entrycachetries",
+	"entrycachehitratio",
+	"currententrycachesize",
+	"maxentrycachesize",
+	"currententrycachecount",
+	"maxentrycachecount",
+	"dncachehits",
+	"dncachetries",
+	"dncachehitratio",
+	"currentdncachesize",
+	"maxdncachesize",
+	"currentdncachecount",
+	"maxdncachecount",
+}
 
 func (o *ds389) SampleConfig() string {
 	return sampleConfig
