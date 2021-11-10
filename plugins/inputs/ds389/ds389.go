@@ -137,6 +137,8 @@ var searchLdbmAttrs = []string{
 	"nsslapd-db-deadlock-rate",
 	"nsslapd-db-lock-conflicts",
 	"nsslapd-db-lock-request-rate",
+	"nsslapd-db-current-locks",
+	"nsslapd-db-max-locks",
 }
 
 var searchDbAttrs = []string{}

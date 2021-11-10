@@ -1,6 +1,6 @@
 Name:		CSI-telegraf-plugins
 Version:	0.1
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	external agents for collecting, processing, aggregating, and writing metrics for Telegraf.
 
 Group:		Development/Tools
@@ -50,6 +50,8 @@ install -D -m 0644 plugins/inputs/ldap_org/README.md README-ldap_org.md
 
 
 %changelog
+* Wed Nov 10 2021 Marco Favero <m.faverof@gmail.com> - 0.1.7
+- Added Locks monitor in DB transactions.
 * Tue Nov 09 2021 Marco Favero <m.faverof@gmail.com> - 0.1.6
 - added some metrics about DB transactions.
 * Mon Nov 08 2021 Marco Favero <m.faverof@gmail.com> - 0.1-5
