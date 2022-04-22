@@ -20,9 +20,9 @@ This plugin gathers metrics from 389 Directory Servers's cn=Monitor backend and 
   # Path to PEM-encoded Root certificate to use to verify server certificate
   tls_ca = "/etc/ssl/certs.pem"
 
-  # dn/password to bind with. If bind_dn is empty, an anonymous bind is performed.
-  bind_dn = ""
-  bind_password = ""
+  # dn/password to bind with. If bindDn is empty, an anonymous bind is performed.
+  bindDn = ""
+  bindPassword = ""
   
   ## Gather dbname to monitor
   # Comma separated list of db filename

@@ -45,7 +45,7 @@ const sampleConfig string = `
   # Path to PEM-encoded Root certificate to use to verify server certificate
   tls_ca = "/etc/ssl/certs.pem"
 
-  # dn/password to bind with. If bind_dn is empty, an anonymous bind is performed.
+  # dn/password to bind with. If bindDn is empty, an anonymous bind is performed.
   bindDn = ""
   bindPassword = ""
 
